@@ -10,8 +10,10 @@
 
 ## Line-item
 
+- Reserved → Rented (on Order activation)
 - Rented → Returnet (if no active Repair ticked)
 - Rented → Repair (if active Repair ticked)
+- Repair → Returned (if repair resolved and business process requires completion)
 
 ## Order
 
