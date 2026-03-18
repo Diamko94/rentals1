@@ -1,38 +1,43 @@
 # Business Rules
 
-## Reservation
+## Order
 
-- Reservation created
-- Reservation does not create financial obligations
+- Order created manually
+- Order blocked Line-units with status Reserved
+- Orded has expiration time (optional)
+- Expired Order releases all line-units with status Reserved
+- Order can be cancelled manually
+- Order blocks line-unit availability for other reservations and rentals
 - Unit status is set to Reserved
-- Reservation can be created only if:
-  - unit status != Available
-  - no overlapping reservations exist
+- Order can be created only if:
+    - Line-item status == Available
+    - no overlapping ordering exist for the same Line-units within the same time period
 
 ## Activation
 
-- Rental becomes Active only after manual confirmation
+- Order get status Active only after manual confirmation
 
-## Line Item Independence
+## Line-item Independence
 
-- Each line item is processed independently
-- Partial return is supported
+- Each Line-item has its own lifecycle independent of other Line-items
+- Status transitions of one Line-item do not affect others
+- Financial calculations are performed per Line-item
 
 ## Deposit Calculation
 
-- Deposit is calculated per line item
+- Deposit is calculated per Line-item
 
 ## Deposit Logic
 
-- Deposit is assigned per Line Item
-- Deposit is returned only if unit is returned without damage (repair ticked not created)
-- Deposit is held if unit is damaged and sent to repair (repair ticked created)
-- Deposit is partially returned in case of partial return
+- Deposit is assigned per Line-item
+- Deposit is returned only if Line-item is returned without damage (no status Repair for Line-item)
+- Deposit is held if unit is damaged (Line-item got statys Repair and repair ticked created)
+- Deposit is partially returned in case of partial Line-item return
 
 ## Partial Closure
 
-- Rental can be partially closed if not all items are returned
+- Order can be partially closed if not all Line-items are returned
 
 ## Restrictions
 
-- Rental cannot start without manual confirmation
+- Order cannot start without manual confirmation
