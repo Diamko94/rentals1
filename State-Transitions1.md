@@ -17,7 +17,7 @@
 
 ## Order
 
-- Draft → Active (after manual confirmation)
+- Order → Active (after manual confirmation)
 - Draft → Cancelled (after manual confirmation)
 - Active → PartiallyClosed (partial return)
 - Active → PartiallyClosed (if Unit has status Repair)
