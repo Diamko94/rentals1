@@ -3,19 +3,22 @@
 ## Order
 
 - Order created manually
-  - Line-items status is set to Reserved
+  - Unit status is set to Reserved
 - Order can be created only if:
-  - Line-item status == Available
-  - no overlapping ordering exist for the same Line-units within the same time period
-- Order can be cancelled manually
-- Orded has expiration time (optional)
-- Order blocks Line-items with status Reserved\
-- Order blocks line-itms availability for other reservations and rentals
-- Expired Order releases all line-items with status Reserved
+  - Unit status == Available
+  - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
+- Order has expiration time (optional)
+- Order blocks Units availability for other reservations and rentals
+- Expiration applies only to Orders that are not Active
 
 ## Activation
 
-- Order get status Active only after manual confirmation
+- On activation:
+  - all associated Units change status from Reserved to Rented
+
+## Cancellation
+
+- Order can be cancelled manually
 
 ## Line-item Independence
 
@@ -23,22 +26,31 @@
 - Status transitions of one Line-item do not affect others
 - Financial calculations are performed per Line-item
 
-## Deposit Calculation
-
-- Deposit is calculated per Line-item
-
 ## Deposit Logic
 
 - Deposit is assigned per Line-item
-- Deposit is returned only if:
+- Deposit is calculated per Line-item
+
+- Deposit is refunded only if:
   - Line-item is in Returned state
-  - no active repair ticket exists- Deposit is held if unit is damaged (Line-item got statys Repair and repair ticked created)
-- Deposit is partially returned in case of partial Line-item return
+  - no active repair ticket exists
+
+- Deposit is held if:
+  - Line-item is in Repair state
+  - repair ticket is active
+
+- Deposit refund is processed per Line-item independently
 
 ## Partial Closure
 
-- Order can be partially closed if not all Line-items are returned
+- Deposit refund is processed per Line-item
+- In case of partial Order return, deposit is refunded only for returned Line-items
+- Order status becomes Partially Closed when:
+  - at least one Line-item is returned
+  - at least one Line-item is not returned
 
 ## Restrictions
 
-- Order cannot start without manual confirmation
+- Order cannot be closed if any Line-item is not resolved
+- Unit cannot be used in multiple active Orders simultaneously
+- Deposit cannot be refunded if repair ticket is active
