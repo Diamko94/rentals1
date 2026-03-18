@@ -2,6 +2,7 @@
 
 ## Order
 
+- Not activated Order named Draft
 - Order activated manually
   - Unit status is set to Reserved
 - Order can be created only if:
