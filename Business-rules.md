@@ -14,7 +14,7 @@
 ## Activation
 
 - On activation:
-  - all associated Units change status from Reserved to Rented
+  - all associated Units change status from Reserved to InUse
 
 ## Cancellation
 
