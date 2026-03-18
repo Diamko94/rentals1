@@ -3,15 +3,15 @@
 ## Order
 
 - Order created manually
-- Order blocked Line-units with status Reserved
-- Orded has expiration time (optional)
-- Expired Order releases all line-units with status Reserved
-- Order can be cancelled manually
-- Order blocks line-unit availability for other reservations and rentals
-- Unit status is set to Reserved
+  - Line-items status is set to Reserved
 - Order can be created only if:
-    - Line-item status == Available
-    - no overlapping ordering exist for the same Line-units within the same time period
+  - Line-item status == Available
+  - no overlapping ordering exist for the same Line-units within the same time period
+- Order can be cancelled manually
+- Orded has expiration time (optional)
+- Order blocks Line-items with status Reserved\
+- Order blocks line-itms availability for other reservations and rentals
+- Expired Order releases all line-items with status Reserved
 
 ## Activation
 
@@ -30,8 +30,9 @@
 ## Deposit Logic
 
 - Deposit is assigned per Line-item
-- Deposit is returned only if Line-item is returned without damage (no status Repair for Line-item)
-- Deposit is held if unit is damaged (Line-item got statys Repair and repair ticked created)
+- Deposit is returned only if:
+  - Line-item is in Returned state
+  - no active repair ticket exists- Deposit is held if unit is damaged (Line-item got statys Repair and repair ticked created)
 - Deposit is partially returned in case of partial Line-item return
 
 ## Partial Closure
