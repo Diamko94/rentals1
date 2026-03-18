@@ -2,17 +2,12 @@
 
 ## Reservation
 
+- Reservation created
 - Reservation does not create financial obligations
 - Unit status is set to Reserved
-Reservation can be created only if:
-- unit status != Available
-- no overlapping reservations exist
-
-## Reservation Conditions
-
-Reservation can be created only if:
-- unit status != Available
-- no overlapping reservations exist
+- Reservation can be created only if:
+  - unit status != Available
+  - no overlapping reservations exist
 
 ## Activation
 
