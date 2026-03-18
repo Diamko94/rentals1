@@ -8,6 +8,11 @@
 - InUse → Available (if Line-item has no active Repair ticket)
 - InUse → Repair (if Line-item has active Repair ticket)
 
+## Line-item
+
+- Rented → Returnet (if no active Repair ticked)
+- Rented → Repair (if active Repair ticked)
+
 ## Order
 
 - Draft → Active (after manual confirmation)
