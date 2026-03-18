@@ -2,7 +2,7 @@
 
 ## Order
 
-- Order created manually
+- Order activated manually
   - Unit status is set to Reserved
 - Order can be created only if:
   - Unit status == Available
