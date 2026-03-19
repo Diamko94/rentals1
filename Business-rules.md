@@ -25,7 +25,6 @@
 
 ## Line-item Independence
 
-- Each Line-item has its own lifecycle independent of other Line-items
 - Financial calculations are performed per Line-item
 - Each Line-item might have one active Repair_ticked corresponding to Unit
 
@@ -60,8 +59,7 @@ Order changes to PartiallyClosed if:
 
 ## Repair_ticket
 
-- Repair_ticket is created when Unit status changes to Repair.
-- Repair_ticket can be issued per each Line-item
+- Repair_ticket is created for a Line-item that references the damaged Unit.
 - Each Repair_ticket has its own lifecycle independent of other Repair_tickets
 - Repair_ticket can be issued only manually 
 - Repair_ticket can be resolved only manually
