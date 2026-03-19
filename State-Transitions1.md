@@ -22,7 +22,3 @@
 - Active → PartiallyClosed (if at least one Line-item is Returned or Repair and at least one is InUse)
 - Active → Closed (only if all Line-items are Returned and all Units in Order have status Available)
 - PartiallyClosed → Closed (only if all Repair-tickets manualy resolved)
-
-## Notes
-
-- PartiallyClosed is a final automatic Order state and cannot transition to Closed within the rental module
