@@ -14,7 +14,7 @@ flowchart TD
 
     %% Возврат
     J --> X[Units status change to Rented]
-    X --> K[Cleint returned units]
+    X --> K[Client returned units]
     K --> L{Manual units verification}
     L --> M[All Units are Fine] 
     M --> N[All Units status change to Available]
