@@ -25,7 +25,7 @@ flowchart TD
 
     %% Расчет
     N --> Q[All Deposits Released]
-    Q --> [Order changes status to Closed]
+    Q --> X[Order changes status to Closed]
     R --> S[Deposit held for Line-item with Unit status Repair]
     T --> U[Deposit returned for Line-item with Unit status Available]
     S --> W[Order changes status to PartiallyClosed]
