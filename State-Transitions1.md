@@ -9,7 +9,7 @@
 - Reserved → Available (if Order status is Cancelled)
 - Rented → Available (if corresponding Line-item has no RepairTicket)
 - Rented → Repair (if corresponding Line-item has RepairTicket)
-- Available → Moving (if unit transpored between Warehouses)
+- Available → Moving (if Unit transported between Warehouses)
 - Moving → Available (Unit default state)
 
 ## Order
