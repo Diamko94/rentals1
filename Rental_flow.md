@@ -14,12 +14,12 @@ When the client arrives, with manually verification:
 
 - Warehouse operator confirms issuance
 - Order status → Active
-- Units status → InUse
-- Each Line-item deposit gets blocked 
+- Units status → Rented
+- Each Line-item deposit is blocked 
 
 ## 3. Active Rental
 
-- Units are in use
+- Units are Rented
 - Each Unit is tracked via corrisponding Line-items
 
 ## 4. Return
@@ -28,17 +28,17 @@ When the client arrives, with manually verification:
 
 All Units returned, no active Repairticked extists → Order is Closed
 
-### Partial Return
+### Order PartiallyClosed
 
 If at least on Unit.status = Repair per Order:
 
-- Line-items with active Repairticked → Repair
-- Other Units status → Returned
+- Units with status Repair → Line-items active Repair_ticked
+- Other Units status → Available
 - Active Order → PartiallyClosed
 
 ## 5. Financial Settlement
 
 - Deposit is calculated per Line-item
 - Price is calculated per Line-item
-- Unit is Returned → Deposit released
-- Line-item with active Repairticket → Deposit held
+- Unit is Available → Deposit released
+- Line-item with active Repair_ticket → Deposit held
