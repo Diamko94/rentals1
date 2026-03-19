@@ -10,6 +10,7 @@
   - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
 - Order blocks Units availability for other reservations and rentals
 - Expiration applies only to Orders that are not Active within 24 hours since Order was created
+- Expired Draft Order transitions to Cancelled automatically, and all associated Units change from Reserved to Available.
 
 ## Order Activation
 
