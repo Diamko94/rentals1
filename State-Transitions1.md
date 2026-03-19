@@ -2,7 +2,7 @@
 
 ## Unit
 
-- Available → Reserved (on reservation creation)
+- Available → Reserved (when Order status is Draft)
 - Reserved → InUse (when Order status is Active)
 - Reserved → Available (if Order status is cancelled)
 - InUse → Available (if corresponding Line-item status is Returned)
