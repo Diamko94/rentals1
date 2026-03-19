@@ -4,22 +4,23 @@
 
 - Not activated Order named Draft
 - Order activated manually
-  - Unit status is set to Reserved
+- Order can be cancelled manually
 - Order can be created only if:
   - Unit status == Available
   - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
-- Order has expiration time (optional)
 - Order blocks Units availability for other reservations and rentals
 - Expiration applies only to Orders that are not Active
 
-## Activation
+## Order Activation
 
 - On activation:
   - all associated Units change status from Reserved to InUse
 
-## Cancellation
+## Order Cancellation
 
-- Order can be cancelled manually
+- On cancellation:
+   - all associated Units change status from Reserved to Available
+
 
 ## Line-item Independence
 
