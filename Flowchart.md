@@ -5,10 +5,8 @@ flowchart TD
     A(Draft Order created) --> B(Units status change to Reserved)
 
     %% Выдача
-    B --> G[Client arrived to Warehouse]
-    G --> I[Manual Confirmation]
-    B --> D[Client not arrived to Warehouse]
-    D --> E[Manual Confirmation]
+    B --> |Client arrived to Warehouse| I[Manual Confirmation]
+    B --> E[Reservation expired or cancelled manually]
     E --> F[Order status changes to Cancelled]
     I --> J(Order status changes to Active)
 
