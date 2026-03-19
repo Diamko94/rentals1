@@ -12,6 +12,8 @@
 - Expiration applies only to Orders that are not Active within 24 hours since Order was created
 - Expired Draft Order transitions to Cancelled automatically, and all associated Units change from Reserved to Available.
 - PartiallyClosed is a final Order state.
+- Cancelled is a final Order state.
+
 
 ## Order Activation
 
