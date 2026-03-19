@@ -50,20 +50,24 @@ Line-item:
 
 ## Unit
 
-Юнит (Unit): ID, Серийный номер, QR-код (nullable), Текущий склад, Статус, Wear_Level (0-100%), История аренд, Дата последнего ТО.
+%%Управление статусами: Доступен, В резерве, В аренде, В ремонте, Перемещение.
+%%Юнит (Unit): ID, Серийный номер, QR-код (nullable), Текущий склад, Статус, Wear_Level (0-100%), История аренд, Дата последнего ТО.
 
 ```yaml
 Unit:
   id: string
 
   serial_number: string
+  QR-code: string
   warehouse_id: string
+
   unit_status: enum
     - Available
     - Reserved
     - InUse
     - Returned
     - Repair
+
   ware_level: number
   rental_history: string
   last_maintenance_date: string
