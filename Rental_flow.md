@@ -30,15 +30,15 @@ All Units returned, no active Repairticked extists → Order is Closed
 
 ### Partial Return
 
-If at least on Line-item.status = Repair per Order:
+If at least on Unit.status = Repair per Order:
 
 - Line-items with active Repairticked → Repair
-- Other Line-item status → Returned
+- Other Units status → Returned
 - Active Order → PartiallyClosed
 
 ## 5. Financial Settlement
 
 - Deposit is calculated per Line-item
 - Price is calculated per Line-item
-- Returned Unit → Deposit released
+- Unit is Returned → Deposit released
 - Line-item with active Repairticket → Deposit held
