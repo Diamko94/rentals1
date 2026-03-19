@@ -45,7 +45,6 @@
 
 ## Partial Closure
 
-- Deposit refund is processed per Line-item
 - In case of partial Order return, deposit is refunded only for returned Line-items
 - Order status becomes Partially Closed when:
   - at least one Line-item is returned
