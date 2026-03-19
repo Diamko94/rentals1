@@ -16,5 +16,5 @@
 
 - Draft → Active (after manual confirmation)
 - Draft → Cancelled (manual cancellation or expiration)
-- Active → PartiallyClosed (if at least one Line-item has Repair_ticked and all other Units statuses are Available)
+- Active → PartiallyClosed (if at least one Unit status is Repair and all other Units statuses are Available)
 - Active → Closed (only if all Units have status Available)
