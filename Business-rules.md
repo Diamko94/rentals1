@@ -54,10 +54,10 @@
 
 ## Partial Closure
 
-- In case of PartiallyClosed Order, deposit is refunded only for Units with status Available
-Order changes to PartiallyClosed if:
-- at least one Unit status is Repair
-- all other Unit statuses are Available
+- In case of PartiallyClosed Order, deposit is refunded only for Units with status Available.
+- Order changes to PartiallyClosed if:
+  - at least one Unit status is Repair
+  - all other Unit statuses are Available
 
 ## RepairTicket
 
