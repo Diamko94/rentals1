@@ -69,6 +69,5 @@ Order changes to PartiallyClosed if:
 
 ## Restrictions
 
-- Order cannot be Closed if at least one Unit status is Repair.
 - Unit cannot be used in multiple active Orders simultaneously
 - Deposit cannot be refunded if Repair_ticket status is Active
