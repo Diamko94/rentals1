@@ -62,10 +62,10 @@
 ## RepairTicket
 
 - RepairTicket is created for a Line-item that references the damaged Unit.
-- Each RepairTicket has its own lifecycle independent of other RepairTicket
+- Each RepairTicket has its own lifecycle independent of other RepairTickets
 - RepairTicket can be issued only manually 
 - RepairTicket can be resolved only manually
-- Each issued RepairTicket held the Deposit per corresponding Line-item.
+- Each issued RepairTicket holds the Deposit per corresponding Line-item.
 
 ## Restrictions
 
