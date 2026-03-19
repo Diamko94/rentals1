@@ -53,6 +53,6 @@
 
 ## Restrictions
 
-- Order cannot be closed if any Line-item is not resolved
+- Order cannot be closed if any Line-item status is not Returned
 - Unit cannot be used in multiple active Orders simultaneously
 - Deposit cannot be refunded if repair ticket is active
