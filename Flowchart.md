@@ -13,7 +13,7 @@ flowchart TD
     I --> J(Order status is Active)
 
     %% Возврат
-    J --> K[Cleint returned units]
+    J -->|Units are In Use| K[Cleint returned units]
     K --> L{Manual units verification}
     L --> M[All Units are Fine] 
     M --> N[All Line-items change status to Returned]
