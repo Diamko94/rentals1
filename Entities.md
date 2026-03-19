@@ -42,7 +42,6 @@ LineItem:
   unit_id: string
 
   status: enum
-    - Available
     - Reserved
     - InUse
     - Returned
