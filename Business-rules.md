@@ -11,7 +11,6 @@
 - Order blocks Units availability for other reservations and rentals
 - Expiration applies only to Orders that are not Active within 24 hours since Order was created
 - Expired Draft Order transitions to Cancelled automatically, and all associated Units change from Reserved to Available.
-- Order changes to PartiallyClosed if at least one Line-item status is Repair and all other Line-items statuses are Returned.
 - Order cannot be Closed if any Line-item status is Repair.
 - PartiallyClosed is a final Order state.
 
