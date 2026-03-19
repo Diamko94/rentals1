@@ -46,7 +46,6 @@ Line-item:
   repair_ticket_id: string?
 ```
 
-# State Transitions
 
 ## Unit
 
