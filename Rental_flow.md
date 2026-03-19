@@ -30,10 +30,10 @@ All Units returned, no active Repairticked extists → Order is Closed
 
 ### Partial Return
 
-Only part of Units returned vith manual verification:
+If at least on Line-item.status = Repair per Order:
 
-- Line-item with no active Repairticked → Returned
 - Line-items with active Repairticked → Repair
+- Other Line-item status → Returned
 - Active Order → PartiallyClosed
 
 ## 5. Financial Settlement
