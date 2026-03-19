@@ -35,7 +35,7 @@ Each Line-item has its own lifecycle and financial attributes,
 enabling partial returns and independent processing.
 
 ```yaml
-LineItem:
+Line-item:
   unit_id: string
 
   status: enum
@@ -44,7 +44,7 @@ LineItem:
     - Returned
     - Repair
 
-  price per period: number
+  price_per_period: number
   deposit: number
 
   repair_ticket_id: string?
