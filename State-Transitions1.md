@@ -3,8 +3,8 @@
 ## Unit
 
 - Available → Reserved (on reservation creation)
-- Reserved → InUse (on rental start)
-- Reserved → Available (if Order cancelled)
+- Reserved → InUse (when Order status is Active)
+- Reserved → Available (if Order status is cancelled)
 - InUse → Available (if corresponding Line-item status is Returned)
 - InUse → Repair (if corresponding Line-item status is Repair)
 
