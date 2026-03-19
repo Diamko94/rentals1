@@ -4,7 +4,7 @@
 
 - Order default status is Draft
 - Order changes status to Active only manually
-- Order can be cancelled manually
+- Order with status Draft can be cancelled manually
 - Order can be created only if:
   - Unit status == Available
   - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
