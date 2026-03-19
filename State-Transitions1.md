@@ -10,7 +10,7 @@
 
 ## Line-item
 
-- Reserved → InUse (on Order activation)
+- Reserved → InUse (if Order status active)
 - InUse → Returned (if no active Repair ticket)
 - InUse → Repair (if active Repair ticket)
 - Repair → Returned  (if active Repair ticket resolved manualy)
