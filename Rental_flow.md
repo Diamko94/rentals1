@@ -20,14 +20,16 @@ When the client arrives, with manually verification:
 ## 3. Active Rental
 
 - Units are in use
-- Each unit is tracked via corrisponding Line-items
+- Each Unit is tracked via corrisponding Line-items
 
 ## 4. Return
 
 ### Full Return
+
 All Units returned, no active Repairticked extists → Order is Closed
 
 ### Partial Return
+
 Only part of Units returned vith manual verification:
 
 - Line-item with no active Repairticked → Returned
