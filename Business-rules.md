@@ -51,8 +51,9 @@
 ## Partial Closure
 
 - In case of partial Order return, deposit is refunded only for Line-items status Returned
-- Order status changes to PartiallyClosed if:
-  - at least one Line-item status is Repair
+Order changes to PartiallyClosed if:
+- at least one Line-item status is Repair
+- all other Line-items statuses are Returned
 
 ## Repairticket
 
