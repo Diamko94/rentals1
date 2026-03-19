@@ -16,7 +16,7 @@
 ## Order Activation
 
 - On activation:
-  - all associated Units change status from Reserved to InUse
+  - all associated Units change status from Reserved to Rented
 
 ## Order Cancellation
 
