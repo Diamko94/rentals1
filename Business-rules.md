@@ -11,7 +11,8 @@
 - Order blocks Units availability for other Orders
 - Expiration applies only to Orders that are not Active within 24 hours since Order was created
 - Expired Draft Order transitions to Cancelled automatically, and all associated Units change from Reserved to Available.
-- PartiallyClosed is a final Order state.
+- PartiallyClosed is a final Order state within the rental module.
+
 - Cancelled is a final Order state.
 
 
@@ -34,8 +35,7 @@
 
 - Unit default status is Available
 - Status transitions of one Unit do not affect others
-- Repair is a final Unit state.
-
+- Repair is a final Unit state within the rental module
 
 ## Deposit Logic
 
