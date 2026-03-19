@@ -19,12 +19,15 @@ flowchart TD
     L --> M[All Units are Fine] 
     M --> N[All Units status change to Available]
     L --> O[At least one Unit is damaged]
-    O --> P[Unit changes status to Repair]
+    O --> P[Damaged Units change status to Repair]
     P --> R[Each line-item with Unit status Repair created Repair_ticket]
-    O --> T[Unit changes status to Available if not damaged]
+    O --> T[Not damaged Units change status to Available]
 
     %% Расчет
     N --> Q[All Deposits Released]
+    Q --> [Order changes status to Closed]
     R --> S[Deposit held for Line-item with Unit status Repair]
     T --> U[Deposit returned for Line-item with Unit status Available]
+    S --> W[Order changes status to PartiallyClosed]
+    U --> W[Order changes status to PartiallyClosed]
 ```
