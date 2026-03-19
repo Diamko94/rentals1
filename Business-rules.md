@@ -37,8 +37,8 @@
   - no active Repairticket exists
 
 - Deposit is held if:
-  - Line-item is in Repair state
-  - repair ticket is active
+  - Line-item status is Repair
+  - Repairticket is active
 
 - Deposit refund is processed per Line-item independently
 
@@ -53,9 +53,9 @@
 
 - Repairticket can be issued per each Line-item
 - Each Repairticket has its own lifecycle independent of other Repairtickets
-- Repairticket can be issued only manually
-- Repairticket can be resolved only manualy
-- Each Issued Repairticket blocks the Deposit per corrispoding Line-item.
+- Repairticket can be issued only manually 
+- Repairticket can be resolved only manually
+- Each Issued Repairticket blocks the Deposit per corrisponding Line-item.
 
 ## Restrictions
 
