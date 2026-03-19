@@ -2,7 +2,7 @@
 flowchart TD
 
     %% Бронироваие
-    A(Draft Order created) --> B(Items Get Status Reserved)
+    A(Draft Order created) --> B(Line-Items Get Status Reserved)
 
     %% Выдача
     B --> G[Client arrived to Warehouse]
