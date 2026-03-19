@@ -65,7 +65,7 @@ Order changes to PartiallyClosed if:
 - Each RepairTicket has its own lifecycle independent of other RepairTicket
 - RepairTicket can be issued only manually 
 - RepairTicket can be resolved only manually
-- Each issued RepairTicket held the Deposit per corrisponding Line-item.
+- Each issued RepairTicket held the Deposit per corresponding Line-item.
 
 ## Restrictions
 
