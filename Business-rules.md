@@ -28,7 +28,7 @@
 ## Line-item Independence
 
 - Financial calculations are performed per Line-item
-- Each Line-item might have one active Repair_ticked corresponding to Unit
+- Each Line-item might have one active RepairTicket corresponding to Unit
 
 ## Unit
 
@@ -44,11 +44,11 @@
 
 - Deposit is refunded only if:
   - Unit status is Available
-  - no active Repair_ticket exists
+  - no active RepairTicket exists
 
 - Deposit is held if:
   - Unit status is Repair
-  - Repair_ticket is active
+  - RepairTicket is active
 
 - Deposit refund is processed per Line-item independently
 
@@ -59,15 +59,15 @@ Order changes to PartiallyClosed if:
 - at least one Unit status is Repair
 - all other Unit statuses are Available
 
-## Repair_ticket
+## RepairTicket
 
-- Repair_ticket is created for a Line-item that references the damaged Unit.
-- Each Repair_ticket has its own lifecycle independent of other Repair_tickets
-- Repair_ticket can be issued only manually 
-- Repair_ticket can be resolved only manually
-- Each issued Repair_ticket held the Deposit per corrisponding Line-item.
+- RepairTicket is created for a Line-item that references the damaged Unit.
+- Each RepairTicket has its own lifecycle independent of other RepairTicket
+- RepairTicket can be issued only manually 
+- RepairTicket can be resolved only manually
+- Each issued RepairTicket held the Deposit per corrisponding Line-item.
 
 ## Restrictions
 
 - Unit cannot be used in multiple active Orders simultaneously
-- Deposit cannot be refunded if Repair_ticket status is Active
+- Deposit cannot be refunded if RepairTicket status is Active
