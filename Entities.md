@@ -42,6 +42,7 @@ LineItem:
   unit_id: string
 
   status: enum
+    - Available
     - Reserved
     - InUse
     - Returned
@@ -51,20 +52,4 @@ LineItem:
   deposit: number
 
   repair_ticket_id: string?
-```
-
-## Unit
-
-Represents a single unit within a Warehouse.
-Each Unit has its own financial attributes, avaiablity and description.
-
-```yaml
-Unit:
-  id: string
-
-  description: string
-
-  status: enum
-    - Available
-    - Unavailable
 ```
