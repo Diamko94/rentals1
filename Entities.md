@@ -28,9 +28,9 @@ Order:
     payment_receipt: string?
 ```
 
-## LineItem
+## Line-item
 
-Represents a single rented unit within a rental.
+Represents a single rented Unit within an Order.
 Each Line-item has its own lifecycle and financial attributes,
 enabling partial returns and independent processing.
 
