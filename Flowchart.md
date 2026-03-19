@@ -18,7 +18,7 @@ flowchart TD
     M --> N[All Units status change to Available]
     L --> O[At least one Unit is damaged]
     O --> P[Damaged Units change status to Repair]
-    P --> R[Each line-item with Unit status Repair created RepairTicket]
+    P --> R[RepairTicket created for corresponding Line-items]
     O --> T[Not damaged Units change status to Available]
 
     %% Расчет
