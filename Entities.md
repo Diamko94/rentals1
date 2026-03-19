@@ -38,14 +38,35 @@ enabling partial returns and independent processing.
 Line-item:
   unit_id: string
 
-  status: enum
-    - Reserved
-    - InUse
-    - Returned
-    - Repair
+  unit_status: string
 
   price_per_period: number
   deposit: number
 
   repair_ticket_id: string?
+```
+
+# State Transitions
+
+## Unit
+
+Юнит (Unit): ID, Серийный номер, QR-код (nullable), Текущий склад, Статус, Wear_Level (0-100%), История аренд, Дата последнего ТО.
+
+```yaml
+Unit:
+  id: string
+
+  serial_number: string
+  warehouse_id: string
+  unit_status: enum
+    - Available
+    - Reserved
+    - InUse
+    - Returned
+    - Repair
+  ware_level: number
+  rental_history: string
+  last_maintenance_date: string
+  
+  price: number
 ```
