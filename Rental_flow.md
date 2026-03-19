@@ -34,7 +34,7 @@ Only part of Units returned vith manual verification:
 
 - Line-item with no active Repairticked → Returned
 - Line-items with active Repairticked → Repair
-- Order → PartiallyClosed
+- Active Order → PartiallyClosed
 
 ## 5. Financial Settlement
 
