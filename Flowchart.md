@@ -20,7 +20,7 @@ flowchart TD
     L --> O[At least one Unit is damaged]
     O --> P[Line-item changes status to Repair for damaged Unit]
     P --> R[Each line-item with status Repair created Repairticket]
-    P --> T[Line-item changes status to Returned for damaged Unit]
+    O --> T[Line-item changes status to Returned for not damaged Unit]
 
     %% Расчет
     N --> Q[All Deposits Released]
