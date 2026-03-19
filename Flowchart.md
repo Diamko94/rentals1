@@ -2,7 +2,7 @@
 flowchart TD
 
     %% Бронироваие
-    A(Draft Order created) --> B(Units Status change to Reserved)
+    A(Draft Order created) --> B(Units status change to Reserved)
 
     %% Выдача
     B --> G[Client arrived to Warehouse]
@@ -13,7 +13,8 @@ flowchart TD
     I --> J(Order status changes to Active)
 
     %% Возврат
-    J -->|Units are In Use| K[Cleint returned units]
+    J --> X[Units status change to Rented]
+    X --> K[Cleint returned units]
     K --> L{Manual units verification}
     L --> M[All Units are Fine] 
     M --> N[All Units status change to Available]
