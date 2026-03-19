@@ -57,7 +57,7 @@ Unit:
   id: string
 
   serial_number: string
-  QR-code: string
+  QR-code: string?
   warehouse_id: string
 
   unit_status: enum
@@ -67,9 +67,9 @@ Unit:
     - Moving
     - Repair
 
-  ware_level: number
-  rental_history: string
-  last_maintenance_date: string
+  waer_level: number
+  rental_history: RentalHistoryEntry[]
+  last_maintenance_date: LastMaintenanceDate[]
   
   price: number
 ```
