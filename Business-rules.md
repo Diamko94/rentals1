@@ -1,5 +1,10 @@
 # Business Rules
 
+## Noted
+
+
+
+
 ## Order
 
 - Order default status is Draft
@@ -11,6 +16,9 @@
 - Order blocks Units availability for other reservations and rentals
 - Expiration applies only to Orders that are not Active within 24 hours since Order was created
 - Expired Draft Order transitions to Cancelled automatically, and all associated Units change from Reserved to Available.
+- Order changes to PartiallyClosed if at least one Line-item status is Repair and all other Line-items statuses are Returned.
+- Order cannot be Closed if any Line-item status is Repair.
+-  PartiallyClosed is a final Order state.
 
 ## Order Activation
 
@@ -27,6 +35,8 @@
 - Each Line-item has its own lifecycle independent of other Line-items
 - Status transitions of one Line-item do not affect others
 - Financial calculations are performed per Line-item
+- Repair is a final Line-item state.
+
 
 ## Deposit Logic
 
@@ -51,6 +61,7 @@
 
 ## Repairticket
 
+- RepairTicket is created when Line-item status changes to Repair.
 - Repairticket can be issued per each Line-item
 - Each Repairticket has its own lifecycle independent of other Repairtickets
 - Repairticket can be issued only manually 
