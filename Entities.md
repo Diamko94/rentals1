@@ -36,9 +36,6 @@ enabling partial returns and independent processing.
 
 ```yaml
 LineItem:
-  id: string
-  rental_id: string
-
   unit_id: string
 
   status: enum
@@ -47,7 +44,7 @@ LineItem:
     - Returned
     - Repair
 
-  price: number
+  price per period: number
   deposit: number
 
   repair_ticket_id: string?
