@@ -20,7 +20,7 @@ Order:
 
   total_amount: number
 
-  line_items: Line-item[]
+  line_items: LineItem[]
 
   documents:
     contract: string?
@@ -28,7 +28,7 @@ Order:
     payment_receipt: string?
 ```
 
-## Line-item
+## Line-Item
 
 Represents a single rented Unit within an Order.
 Each Line-item has its own lifecycle and financial attributes,
@@ -57,7 +57,7 @@ Unit:
   id: string
 
   serial_number: string
-  QR-code: string?
+  QR_code: string?
   warehouse_id: string
 
   unit_status: enum
@@ -67,9 +67,9 @@ Unit:
     - Moving
     - Repair
 
-  waer_level: number
+  wear_level: number
   rental_history: RentalHistoryEntry[]
-  last_maintenance_date: LastMaintenanceDate[]
+  last_maintenance_date: date?
   
   price: number
 ```
