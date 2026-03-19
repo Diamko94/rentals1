@@ -9,7 +9,7 @@
   - Unit status == Available
   - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
 - Order blocks Units availability for other reservations and rentals
-- Expiration applies only to Orders that are not Active
+- Expiration applies only to Orders that are not Active within 24 hours since it was created
 
 ## Order Activation
 
