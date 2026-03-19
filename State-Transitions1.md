@@ -5,8 +5,8 @@
 - Available → Reserved (on reservation creation)
 - Reserved → InUse (on rental start)
 - Reserved → Available (if Order cancelled)
-- InUse → Available (if Line-item status is Returned)
-- InUse → Repair (if Line-item status is Repair)
+- InUse → Available (if corresponding Line-item status is Returned)
+- InUse → Repair (if corresponding Line-item status is Repair)
 
 ## Line-item
 
@@ -23,4 +23,4 @@
 
 ## Notes
 
-- PartiallyClosed is a final automatic Order state
+- PartiallyClosed is a final automatic Order state and cannot transition to Closed within the rental module
