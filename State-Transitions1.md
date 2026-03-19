@@ -2,21 +2,19 @@
 
 ## Unit
 
+%%Управление статусами: Доступен, В резерве, В аренде, В ремонте, Перемещение.
+
 - Available → Reserved (when Order status is Draft)
-- Reserved → InUse (when Order status is Active)
-- Reserved → Available (if Order status is cancelled)
-- InUse → Available (if corresponding Line-item status is Returned)
-- InUse → Repair (if corresponding Line-item status is Repair)
-
-## Line-item
-
-- Reserved → InUse (if Order status active)
-- InUse → Returned (if no active Repair ticket)
-- InUse → Repair (if Repairticket is active)
+- Reserved → Rented (when Order status is Active)
+- Reserved → Available (if Order status is Cancelled)
+- Rented → Available (if corresponding Line-item has no Repair_ticket)
+- Rented → Repair (if corresponding Line-item has Repair_ticket)
+- Available → Moving (if unit transpored between Warehouses)
+- Moving → Available (Unit default state)
 
 ## Order
 
 - Draft → Active (after manual confirmation)
 - Draft → Cancelled (manual cancellation or expiration)
-- Active → PartiallyClosed (if at least one Line-item status is Repair and all other Line-items statuses are Returned)
-- Active → Closed (only if all Line-items statuses are Returned and all Units in Order have status Available)
+- Active → PartiallyClosed (if at least one Line-item has Repair_ticked and all other Units statuses are Available)
+- Active → Closed (only if all Units have status Available)
