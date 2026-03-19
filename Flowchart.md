@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     %% Бронироваие
@@ -21,3 +22,4 @@ flowchart TD
     %% Расчет
     M --> O[Deposit Returned]
     N --> P[Deposit held]
+```
