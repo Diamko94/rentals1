@@ -2,14 +2,14 @@
 
 ## Order
 
-- Order stutus is Draft before changes to Active
+- Order default status is Draft
 - Order changes status to Active only manually
 - Order can be cancelled manually
 - Order can be created only if:
   - Unit status == Available
   - No overlapping reservations or active Orders are allowed for the same Unit within the same time period
 - Order blocks Units availability for other reservations and rentals
-- Expiration applies only to Orders that are not Active within 24 hours since it was created
+- Expiration applies only to Orders that are not Active within 24 hours since Order was created
 
 ## Order Activation
 
@@ -33,8 +33,8 @@
 - Deposit is calculated per Line-item
 
 - Deposit is refunded only if:
-  - Line-item is in Returned state
-  - no active repair ticket exists
+  - Line-item status is Returned
+  - no active Repairticket exists
 
 - Deposit is held if:
   - Line-item is in Repair state
@@ -44,13 +44,21 @@
 
 ## Partial Closure
 
-- In case of partial Order return, deposit is refunded only for returned Line-items
-- Order status becomes PartiallyClosed when:
+- In case of partial Order return, deposit is refunded only for Line-items status Returned
+- Order status changes to PartiallyClosed if:
   - at least one Line-item status is Returned
-  - at least one Line-item status in Repair
+  - at least one Line-item status is Repair
+
+## Repairticket
+
+- Repairticket can be issued per each Line-item
+- Each Repairticket has its own lifecycle independent of other Repairtickets
+- Repairticket can be issued only manually
+- Repairticket can be resolved only manualy
+- Each Issued Repairticket blocks the Deposit per corrispoding Line-item.
 
 ## Restrictions
 
-- Order cannot be closed if any Line-item status is not Returned
+- Order cannot be Closed if any Line-item status is not Returned
 - Unit cannot be used in multiple active Orders simultaneously
-- Deposit cannot be refunded if repair ticket is active
+- Deposit cannot be refunded if Repairticket status is Active
