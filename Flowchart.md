@@ -25,5 +25,5 @@ flowchart TD
     %% Расчет
     N --> Q[All Deposits Released]
     R --> S[Deposit held for Line-item with status Repair]
-    R --> U[Deposit returned for Line-item with status Returned]
+    T --> U[Deposit returned for Line-item with status Returned]
 ```
