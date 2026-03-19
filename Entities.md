@@ -64,8 +64,8 @@ Unit:
   unit_status: enum
     - Available
     - Reserved
-    - InUse
-    - Returned
+    - Rented
+    - Moving
     - Repair
 
   ware_level: number
