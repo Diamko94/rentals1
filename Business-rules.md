@@ -26,8 +26,8 @@
 ## Line-item Independence
 
 - Each Line-item has its own lifecycle independent of other Line-items
-- Status transitions of one Line-item do not affect others
 - Financial calculations are performed per Line-item
+- Each Line-item might have one active Repair_ticked corresponding to Unit
 
 ## Unit
 
