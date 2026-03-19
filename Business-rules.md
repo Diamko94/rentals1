@@ -2,8 +2,8 @@
 
 ## Order
 
-- Not activated Order named Draft
-- Order activated manually
+- Order stutus is Draft before changes to Active
+- Order changes status to Active only manually
 - Order can be cancelled manually
 - Order can be created only if:
   - Unit status == Available
@@ -20,7 +20,6 @@
 
 - On cancellation:
    - all associated Units change status from Reserved to Available
-
 
 ## Line-item Independence
 
