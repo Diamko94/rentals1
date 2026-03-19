@@ -10,15 +10,18 @@ flowchart TD
     B --> D[Client not arrived to Warehouse]
     D --> E[Manual Confirmation]
     E --> F[Order status is Cancelled]
-    F --> Z[Units become Available]
     I --> J(Order status is Active)
 
     %% Возврат
-    J -->|Cleint brings back units| K[Return Full/Partial]
-    K -->|Fine| M[Get status Available]
-    K -->|Damaged| N[Repair]
+    J --> K[Cleint returned units]
+    K --> L{Manual units verification}
+    L --> M[All Units are Fine] 
+    M --> N[All Line-items change status to Returned]
+    L --> O[At least one Unit is damaged]
+    O --> P[Line-item with damaged Unit changes status to Repair]
+    P --> R[Each line-units with status Repair created Repairticket]
 
     %% Расчет
-    M --> O[Deposit Returned]
-    N --> P[Deposit held]
+    N --> Q[Deposit Released]
+    R --> S[Deposit held]
 ```
