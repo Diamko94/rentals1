@@ -12,7 +12,7 @@
 
 - Reserved → InUse (if Order status active)
 - InUse → Returned (if no active Repair ticket)
-- InUse → Repair (if active Repair ticket)
+- InUse → Repair (after manual confirmation and if active Repair ticket)
 - Repair → Returned  (if active Repair ticket resolved manualy)
 
 ## Order
