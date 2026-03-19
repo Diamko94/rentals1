@@ -7,8 +7,8 @@
 - Available → Reserved (when Order status is Draft)
 - Reserved → Rented (when Order status is Active)
 - Reserved → Available (if Order status is Cancelled)
-- Rented → Available (if corresponding Line-item has no Repair_ticket)
-- Rented → Repair (if corresponding Line-item has Repair_ticket)
+- Rented → Available (if corresponding Line-item has no RepairTicket)
+- Rented → Repair (if corresponding Line-item has RepairTicket)
 - Available → Moving (if unit transpored between Warehouses)
 - Moving → Available (Unit default state)
 
