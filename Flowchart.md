@@ -2,13 +2,12 @@
 flowchart TD
 
     %% Бронироваие
-    A(Содается Резерв) -->|Manager actives Order| B[Reservation created]
-    B --> C(Items Get Status Reserved)
+    A(Draft Order created) --> B(Items Get Status Reserved)
 
     %% Выдача
-    C --> G[Client arrived to Warehouse]
+    B --> G[Client arrived to Warehouse]
     G --> I[Manual Confirmation]
-    C --> D[Client not arrived to Warehouse]
+    B --> D[Client not arrived to Warehouse]
     D --> E[Manual Confirmation]
     E --> F[Order status is Cancelled]
     F --> Z[Units become Available]
