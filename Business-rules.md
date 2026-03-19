@@ -55,7 +55,7 @@
 - Each Repairticket has its own lifecycle independent of other Repairtickets
 - Repairticket can be issued only manually 
 - Repairticket can be resolved only manually
-- Each Issued Repairticket blocks the Deposit per corrisponding Line-item.
+- Each issued Repairticket held the Deposit per corrisponding Line-item.
 
 ## Restrictions
 
