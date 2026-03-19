@@ -16,10 +16,9 @@ flowchart TD
     K --> L{Manual units verification}
     L --> M[All Units are Fine] 
     M --> N[All Units status change to Available]
-    L --> O[At least one Unit is damaged]
-    O --> P[Damaged Units change status to Repair]
+    L -->|At least one Unit is damaged| P[Damaged Units change status to Repair]
     P --> R[RepairTicket created for corresponding Line-items]
-    O --> T[Not damaged Units change status to Available]
+    L --> T[Not damaged Units change status to Available]
 
     %% Расчет
     N --> Q[All Deposits Released]
