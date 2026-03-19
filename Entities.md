@@ -20,7 +20,7 @@ Order:
 
   total_amount: number
 
-  line_items: LineItem[]
+  line_items: Lin-item[]
 
   documents:
     contract: string?
