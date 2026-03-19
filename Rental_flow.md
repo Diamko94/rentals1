@@ -39,4 +39,4 @@ Only part of Units returned vith manual verification:
 - Deposit is calculated per Line-item
 - Price is calculated per Line-item
 - Returned Unit → Deposit released
-- Line-item with active Repairticket → deposit held
+- Line-item with active Repairticket → Deposit held
