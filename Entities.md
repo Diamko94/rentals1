@@ -1,14 +1,15 @@
-Entities
+# Entities
 
-Order
+## Order
 
-Represents a rental order that manages the lifecycle of rented units, including issuance, return, and financial settlement.
+Represents a rental Order that manages the lifecycle of rented units,
+including issuance, return, and financial settlement.
 
-Rental:
+```yaml
+Order:
   id: string
   customer_id: string
   warehouse_id: string
- 
 
   status: enum
     - Draft
@@ -25,11 +26,15 @@ Rental:
     contract: string?
     act: string?
     payment_receipt: string?
+```
 
-Line-item
+## LineItem
 
-Represents a single rented unit within a rental. Each Line-item has its own lifecycle and financial attributes, enabling partial returns and independent processing.
+Represents a single rented unit within a rental.
+Each Line-item has its own lifecycle and financial attributes,
+enabling partial returns and independent processing.
 
+```yaml
 LineItem:
   id: string
   rental_id: string
@@ -46,3 +51,20 @@ LineItem:
   deposit: number
 
   repair_ticket_id: string?
+```
+
+## Unit
+
+Represents a single unit within a Warehouse.
+Each Unit has its own financial attributes, avaiablity and description.
+
+```yaml
+Unit:
+  id: string
+
+  description: string
+
+  status: enum
+    - Available
+    - Unavailable
+```
