@@ -1,5 +1,5 @@
-
 ```mermaid
+
 flowchart TD
     A1(Units are Available on specific Warehouse) --> A2[Manager selected Units under Client Request]
     A2 --> A(Draft Order created)
