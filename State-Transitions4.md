@@ -133,3 +133,18 @@
 - Клиент возвращает все оборудование одновременно
 - `Closed` и `PartiallyClosed` — финальные состояния заказа в рамках rental-модуля
 - Состояние `Repair` для Unit и Line-item не обрабатывается дальше внутри rental-модуля
+
+## Status Mapping
+
+### Unit
+- Доступно = Available
+- В резерве = InReservation
+- В аренде = Rented
+- В ремонте = Repair
+
+### Order
+- Черновик = Draft
+- Активен = Active
+- Отменен = Cancelled
+- Закрыт = Closed
+- Частично закрыт = PartiallyClosed
