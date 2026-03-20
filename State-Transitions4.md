@@ -138,7 +138,7 @@
 
 ### Unit
 - Доступно = Available
-- В резерве = InReservation
+- В резерве = Reserved
 - В аренде = Rented
 - В ремонте = Repair
 
