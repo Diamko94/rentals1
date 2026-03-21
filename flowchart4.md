@@ -2,12 +2,7 @@
 flowchart TD
 
  %% Выделение цветом
-    style D0 fill:#ff0080,stroke:#333,stroke-width:2px
-    style D00 fill:#ff0150,stroke:#333,stroke-width:2px
-    style D000 fill:#f9750,stroke:#333,stroke-width:2px
-
-
-  
+    style D0 fill:#ff0150,stroke:#333,stroke-width:2px
 
     %% Подтверждение
     D0[Инструменты на складе в статусе «Доступен»]
