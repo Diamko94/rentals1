@@ -44,8 +44,9 @@ erDiagram
         string warehouse_id
         string unit_id
         string order_id
-        string status
+        string status 
         string reason
+        number repair_cost
     }
 
     CUSTOMER ||--o{ ORDER : places
